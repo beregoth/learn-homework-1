@@ -20,7 +20,19 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    row1 = input('Введите первую строку: ')
+    row2 = input('Введите вторую строку: ')
+    def compare(row1, row2):
+        if type(row1) == str and type(row2) == str:
+            if row1 == row2:
+                return 1
+            elif row1 != row2 and len(row1) > len(row2):
+                return 2
+            elif row1 != row2 and row2 == 'learn':
+                return 3
+            else:
+                return 0
+    print(compare(row1, row2))
     
 if __name__ == "__main__":
     main()
